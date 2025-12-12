@@ -48,11 +48,11 @@ if __name__ == "__main__":
     
     print(f"--- Тест 1: Кабелі {cables_1} ---")
     print(f"Мінімальна загальна вартість: {cost_1}")
-    print("\nІсторія об'єднань (C1 + C2 = Новий Кабель):")
+    print("\nІсторія об'єднань:")
     for c1, c2, new_length in history_1:
         print(f"  Об'єднання {c1} та {c2}. Вартість: {new_length}. Нова купа: {new_length}")
     
-    cables_2 = [1, 2, 3, 4, 5]
+    cables_2 = [1, 2, 3, 4, 5, 7, 8, 9]
     cost_2, history_2 = min_cost_to_connect_cables(cables_2)
     
     print(f"\n--- Тест 2: Кабелі {cables_2} ---")

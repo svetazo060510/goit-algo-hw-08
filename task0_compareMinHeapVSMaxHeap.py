@@ -77,24 +77,24 @@ if __name__ == "__main__":
     
     # Тестові дані
     cables_1 = [4, 3, 2, 6]
-    cables_2 = [1, 2, 3, 4, 5]
+    cables_2 = [1, 2, 3, 4, 5, 7, 8, 9]
     
     print("--- Порівняння Витрат: Min Heap (Оптимально) vs Max Heap (Найгірше) ---")
     print("-------------------------------------------------------------------")
 
     # --- ТЕСТ 1 ---
-    print(f"\n[Тест 1] Початкові кабелі: {cables_1}")
+    print(f"\n[Тест 1] Кабелі: {cables_1}")
     
     # MIN HEAP (Оптимально)
     cost_min_1, history_min_1 = min_cost_to_connect_cables(cables_1)
-    print(f"  Мін-Купа (Min Heap - ОПТИМАЛЬНО): Загальна вартість = {cost_min_1}")
+    print(f"  Min Heap: Загальна вартість = {cost_min_1}")
     print("  Історія (Min Heap):")
     for c1, c2, new_length in history_min_1:
         print(f"    Об'єднання {c1} та {c2} -> {new_length}") 
         
     # MAX HEAP (Анти-Оптимально)
     cost_max_1, history_max_1 = max_cost_to_connect_cables(cables_1)
-    print(f"  Макс-Купа (Max Heap - НАЙГІРШЕ): Загальна вартість = {cost_max_1}")
+    print(f"  Max Heap: Загальна вартість = {cost_max_1}")
     print("  Історія (Max Heap):")
     for c1, c2, new_length in history_max_1:
         print(f"    Об'єднання {c1} та {c2} -> {new_length}")
@@ -106,14 +106,14 @@ if __name__ == "__main__":
 
     # MIN HEAP (Оптимально)
     cost_min_2, history_min_2 = min_cost_to_connect_cables(cables_2)
-    print(f"  Мін-Купа (Min Heap - ОПТИМАЛЬНО): Загальна вартість = {cost_min_2}")
+    print(f"  Min Heap: Загальна вартість = {cost_min_2}")
     print("  Історія (Min Heap):")
     for c1, c2, new_length in history_min_2:
         print(f"    Об'єднання {c1} та {c2} -> {new_length}") 
         
     # MAX HEAP (Анти-Оптимально)
     cost_max_2, history_max_2 = max_cost_to_connect_cables(cables_2)
-    print(f"  Макс-Купа (Max Heap - НАЙГІРШЕ): Загальна вартість = {cost_max_2}")
+    print(f"  Max Heap: Загальна вартість = {cost_max_2}")
     print("  Історія (Max Heap):") 
     for c1, c2, new_length in history_max_2:
         print(f"    Об'єднання {c1} та {c2} -> {new_length}")
